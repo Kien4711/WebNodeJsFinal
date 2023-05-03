@@ -1,0 +1,9 @@
+{
+    "email": "trungkien@gmail.com",
+    "password": "123456",
+    "fullname": "Bui Trung Kien",
+    "address": "Truc Thai",
+    "birthday":"2002-05-13",
+    "phone":"0387899510"
+}
+

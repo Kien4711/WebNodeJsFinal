@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <title>Document</title>
+</head>
+<body>
+    <div class="justify-content-center align-items-center container-otp display-active" id="resend-card">
+        <div class="card py-5 px-3">
+            <h5 class="mb-2">Mobile phone verification</h5><span class="mobile-text">Enter the code we just send on your mobile phone</span>
+            <form action="eOtp" method="post">
+                <div class="d-flex flex-row mt-5">
+                    <input name="otp" type="text" class="form-control" autofocus required>
+                </div>
+                <div class="text-center mt-4">
+                    <span class="d-block mobile-text">Don't receive the code?</span>
+                    <button id="btn-resend">Resend</button>
+                    <button id="btn-submit" type="submit">Submit</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</body>
+<script>
+    const buttonSubmit = document.getElementById('btn-submit');
+    const buttonResend = document.getElementById('btn-resend');
+    const SubmitCard = document.getElementById('submit-card');
+    const ResendCard = document.getElementById('resend-card');
+
+    buttonSubmit.addEventListener('click', () => {
+        console.log(buttonSubmit)
+        SubmitCard.classList.remove("d-flex");
+        SubmitCard.classList.add("display-active")
+        ResendCard.classList.add("d-flex");
+        ResendCard.classList.remove("display-active");
+    });   
+</script>
+</html>

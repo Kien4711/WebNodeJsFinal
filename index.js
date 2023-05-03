@@ -11,7 +11,7 @@ app.set('view engine', 'ejs')
 
 //Routing User
 app.use('/', userRoute)
-// app.use('/admin',adminRoute)
+app.use('/admin',adminRoute)
 
 //JSON encode
 app.use(express.urlencoded({ extended:false }))

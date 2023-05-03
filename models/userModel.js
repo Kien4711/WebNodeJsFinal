@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema({
     address: { type: String, required: true },
     birthday: { type: Date, required: true },
     password: { type: String, required: true },
-    // otp: { type: String },
+    otp: { type: String },
     // otpCreatedTime: { type: Date }
   });
 // Hash password before saving to database
